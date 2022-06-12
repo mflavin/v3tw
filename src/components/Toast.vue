@@ -1,6 +1,6 @@
 <template>
   <div v-if="show" class="rounded-card toast-card">
-    <div class="-mt-2 w-full text-right text-slate-400 hover:text-slate-900">
+    <div class="-mt-2 w-full text-right text-slate-500 hover:text-slate-900 dark:hover:text-slate-300">
       <span
         @click="close()"
         class="text-2xl font-medium md:cursor-pointer"
