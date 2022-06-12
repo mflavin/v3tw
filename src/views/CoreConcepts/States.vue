@@ -6,7 +6,7 @@
         <span class="text-2xl font-medium md:cursor-pointer" aria-hidden="true"> &times; </span>
       </div>
       <div class="shrink-0">
-        <img class="h-12 w-12" src="favicon.ico" alt="Logo" />
+        <img class="h-12 w-12" src="/favicon.ico" alt="Logo" />
       </div>
       <div>
         <div class="text-xl font-medium text-black">ChitChat</div>
@@ -101,7 +101,7 @@
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#file-input-buttons -->
     <form class="rounded-card toast-card">
       <div class="my-1 mx-auto">
-        <img class="h-16 w-16" src="img/icons/apple-touch-icon.png" alt="Logo" />
+        <img class="h-16 w-16" src="/img/icons/apple-touch-icon.png" alt="Logo" />
       </div>
       <label class="my-2 mx-4 block">
         <span class="sr-only">Choose profile photo</span>
