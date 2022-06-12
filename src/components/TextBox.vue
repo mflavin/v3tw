@@ -1,6 +1,6 @@
 <template>
   <label class="mx-2 block">
-    <span class="block text-sm font-medium text-slate-700 dark:text-slate-300">{{ label }}</span>
+    <span class="block font-medium text-slate-700 dark:text-slate-300">{{ label }}</span>
     <input
       :type="type"
       :value="value"
@@ -9,7 +9,7 @@
     />
     <p
       v-if="peer"
-      class="invisible mt-2 text-sm text-pink-600 peer-invalid:visible"
+      class="invisible mt-2 text-pink-600 peer-invalid:visible"
     >
       {{ peer }}
     </p>

@@ -9,8 +9,8 @@
         &times;
       </span>
     </div>
-    <div class="shrink-0">
-      <img class="h-12 w-12" :src="icon" alt="Logo" />
+    <div class="shrink-0 rounded-full bg-slate-300">
+      <img class="m-2 h-16 w-16" :src="icon" alt="Logo" />
     </div>
     <div class="w-40">
       <div class="text-xl font-medium text-black dark:text-white">
@@ -30,7 +30,7 @@ export default {
     icon: {
       type: String,
       required: false,
-      default: '/favicon.ico',
+      default: '/img/icons/android-chrome-192x192.png',
     },
     title: {
       type: String,

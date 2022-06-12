@@ -96,10 +96,10 @@
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#file-input-buttons -->
     <form class="rounded-card toast-card my-8">
-      <div class="my-1 mx-auto">
+      <div class="my-1 mx-auto rounded-full bg-slate-300">
         <img
-          class="h-16 w-16"
-          src="/img/icons/apple-touch-icon.png"
+          class="h-16 w-16 m-2"
+          src="/img/icons/android-chrome-192x192.png"
           alt="Logo"
         />
       </div>
