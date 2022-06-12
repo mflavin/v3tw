@@ -30,7 +30,7 @@ export default {
     icon: {
       type: String,
       required: false,
-      default: '/img/icons/android-chrome-192x192.png',
+      default: '/v3tw/img/icons/android-chrome-192x192.png',
     },
     title: {
       type: String,
