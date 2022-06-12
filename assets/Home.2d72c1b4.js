@@ -1,1 +1,0 @@
-import{T as e}from"./Toast.ddc81f7a.js";import{_ as t,r as s,o as n,c as r}from"./index.64fef047.js";const a={name:"Home",components:{Toast:e}};function c(p,m,_,i,f,l){const o=s("Toast");return n(),r(o,{title:"Tailwind CSS",text:"Going through the Core Concepts sections here"})}var u=t(a,[["render",c]]);export{u as default};
