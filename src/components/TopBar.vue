@@ -1,23 +1,14 @@
 <template>
   <nav class="fixed top-0 z-50 w-full">
-    <ul
-      class="
-        flex
-        h-20
-        justify-between
-        bg-slate-50
-        p-4
-        dark:bg-slate-800
-      "
-    >
-      <li class="sm:w-36 md:w-2/6 lg:w-1/2 ">
+    <ul class="flex h-20 justify-between bg-slate-50 p-4 dark:bg-slate-800">
+      <li class="sm:w-36 md:w-2/6 lg:w-1/2">
         <img
           class="m-2 w-10 sm:w-12"
           src="/img/icons/android-chrome-192x192.png"
           alt="Logo"
         />
       </li>
-      <li class="sm:hidden mt-3">
+      <li class="mt-3 sm:hidden">
         <button
           v-if="!menu"
           @click="menu = !menu"
@@ -89,10 +80,11 @@
           :class="{ 'translate-y-0': menu }"
         >
           <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
-            <li class="mx-0.5 p-3 text-right">
+            <li class="mx-0.5 text-right">
               <button
                 @click="menu = !menu"
                 class="
+                  p-3
                   text-slate-500
                   hover:text-slate-900
                   dark:hover:text-slate-300
@@ -106,12 +98,13 @@
             <li
               v-for="(nav, idx) in navItems"
               :key="`${nav.path}_${idx}`"
-              class="mx-0.5 p-3"
+              class="mx-0.5"
             >
               <RouterLink
                 @click="menu = false"
                 class="
                   block
+                  p-3
                   hover:bg-gray-100
                   focus:bg-sky-200
                   dark:text-white dark:hover:text-black
@@ -174,12 +167,13 @@
       <li
         v-for="(nav, idx) in navItems"
         :key="`${nav.path}_${idx}`"
-        class="mx-0.5 p-3 hidden sm:block"
+        class="mx-0.5 hidden sm:block"
       >
         <RouterLink
           @click="menu = false"
           class="
             block
+            p-3
             hover:bg-gray-100
             focus:bg-sky-200
             dark:text-white dark:hover:text-black
@@ -189,7 +183,7 @@
           {{ nav.name }}
         </RouterLink>
       </li>
-      <li class="hidden mx-0.5 sm:flex items-baseline p-3">
+      <li class="mx-0.5 hidden items-baseline p-3 sm:flex">
         <div class="block dark:text-white">Dark mode</div>
         <div
           @click="toggleDarkMode()"
