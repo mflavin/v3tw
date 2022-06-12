@@ -1,67 +1,38 @@
 <template>
-  <div class="flex flex-wrap">
-    <a
-      href="/"
-      class="
-        rounded-card
-        group
-        my-4
-        block
-        p-6
-        ring-1 ring-slate-900/5
-        hover:bg-sky-500 hover:ring-sky-500
-      "
-    >
-      <div class="flex items-center space-x-3">
-        <h3 class="text-sm font-semibold text-slate-900 group-hover:text-white">
-          Home
-        </h3>
-      </div>
-      <p class="mt-3 text-sm text-slate-500 group-hover:text-white">
-        Home page that shows all other pages
+  <div v-if="show" class="rounded-card toast-card">
+    <div class="-mt-2 w-full text-right text-slate-400 hover:text-slate-900">
+      <span
+        @click="close()"
+        class="text-2xl font-medium md:cursor-pointer"
+        aria-hidden="true"
+      >
+        &times;
+      </span>
+    </div>
+    <div class="shrink-0">
+      <img class="h-12 w-12" src="/favicon.ico" alt="Logo" />
+    </div>
+    <div class="w-40">
+      <div class="text-xl font-medium text-black">Tailwind CSS</div>
+      <p class="text-sm text-slate-500">
+        Going through the Core Concepts sections here
       </p>
-    </a>
-    <a
-      href="/v3/coreconcepts/states"
-      class="
-        rounded-card
-        group
-        my-4
-        block
-        p-6
-        ring-1 ring-slate-900/5
-        hover:bg-sky-500 hover:ring-sky-500
-      "
-    >
-      <div class="flex items-center space-x-3">
-        <h3 class="text-sm font-semibold text-slate-900 group-hover:text-white">
-          States
-        </h3>
-      </div>
-      <p class="mt-3 text-sm text-slate-500 group-hover:text-white">
-        First section of tailwind's core concepts
-      </p>
-    </a>
-    <a
-      href="/v3/coreconcepts/responsive-design"
-      class="
-        rounded-card
-        group
-        my-4
-        block
-        p-6
-        ring-1 ring-slate-900/5
-        hover:bg-sky-500 hover:ring-sky-500
-      "
-    >
-      <div class="flex items-center space-x-3">
-        <h3 class="text-sm font-semibold text-slate-900 group-hover:text-white">
-          Responsive Design
-        </h3>
-      </div>
-      <p class="mt-3 text-sm text-slate-500 group-hover:text-white">
-        Second section of tailwind's core concepts
-      </p>
-    </a>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'home',
+  data() {
+    return {
+      show: true,
+    };
+  },
+  methods: {
+    close() {
+      this.show = false;
+    },
+  },
+};
+</script>

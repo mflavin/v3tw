@@ -6,7 +6,18 @@
         :key="`${nav.path}_${idx}`"
         class="mr-6"
       >
-        <RouterLink class="text-blue-500 hover:text-blue-800" :to="nav.path">
+        <RouterLink
+          class="
+            rounded-card
+            my-4
+            block
+            px-6
+            py-2
+            ring-1 ring-slate-900/5
+            hover:bg-sky-500 hover:ring-sky-500
+          "
+          :to="nav.path"
+        >
           {{ nav.name }}
         </RouterLink>
       </li>
