@@ -14,7 +14,7 @@
 }
 
 .rounded-card {
-  @apply mx-auto max-w-xs rounded-xl bg-white shadow-md dark:bg-slate-900;
+  @apply mx-auto max-w-xs rounded-xl bg-white shadow-md dark:bg-slate-900 md:max-w-2xl;
 }
 
 .toast-card {

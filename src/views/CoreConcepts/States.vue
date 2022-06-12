@@ -201,7 +201,7 @@
       </p>
     </div>
 
-    <div class="mx-auto max-w-xs py-8">
+    <div class="mx-auto max-w-xs py-8 md:max-w-2xl">
       <details
         class="
           group
