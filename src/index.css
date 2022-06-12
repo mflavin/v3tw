@@ -7,10 +7,10 @@
   border-slate-300 bg-white px-3 py-2
   placeholder-slate-400
   shadow-sm invalid:border-pink-500
-  invalid:text-pink-600 focus:border-sky-500
-  focus:outline-none focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500
-  focus:invalid:ring-pink-500 read-only:border-slate-200
-  read-only:bg-gray-100 disabled:text-slate-500 disabled:shadow-none dark:bg-slate-200;
+  invalid:text-pink-600 read-only:border-slate-300
+  read-only:bg-gray-200 read-only:text-slate-500 read-only:shadow-none focus:border-sky-500
+  focus:outline-none focus:ring-1
+  focus:ring-sky-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 dark:bg-slate-200 dark:read-only:bg-slate-500 dark:read-only:text-slate-300;
 }
 
 .rounded-card {
