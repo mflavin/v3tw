@@ -1,9 +1,6 @@
 <template>
-  <div class="h-full bg-slate-50 dark:bg-slate-800">
+  <div class="h-full bg-slate-50 pt-20 dark:bg-slate-800">
     <TopBar />
-
-
-
     <RouterView />
   </div>
 </template>

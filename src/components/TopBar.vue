@@ -1,14 +1,23 @@
 <template>
-  <nav class="p-4">
-    <ul class="flex flex-wrap justify-between bg-slate-50 dark:bg-slate-800">
-      <li>
+  <nav class="fixed top-0 z-50 w-full">
+    <ul
+      class="
+        flex
+        h-20
+        justify-between
+        bg-slate-50
+        p-4
+        dark:bg-slate-800
+      "
+    >
+      <li class="sm:w-36 md:w-2/6 lg:w-1/2 ">
         <img
-          class="w-8 sm:w-16"
+          class="m-2 w-10 sm:w-12"
           src="/img/icons/android-chrome-192x192.png"
           alt="Logo"
         />
       </li>
-      <li>
+      <li class="sm:hidden mt-3">
         <button
           v-if="!menu"
           @click="menu = !menu"
@@ -60,40 +69,11 @@
             ></span>
           </span>
         </button>
-        <button
-          v-else
-          @click="menu = !menu"
-          class="
-            group
-            flex
-            w-10
-            cursor-pointer
-            items-center
-            justify-center
-            p-1
-            text-slate-500
-            hover:text-slate-900
-            dark:hover:text-slate-300
-          "
-        >
-          <span
-            class="
-              absolute
-              top-2
-              right-4
-              text-2xl
-              font-medium
-              md:cursor-pointer
-            "
-          >
-            &times;
-          </span>
-        </button>
         <div
           class="
             fixed
             left-0
-            top-14
+            top-0
             z-50
             h-full
             w-full
@@ -109,39 +89,40 @@
           :class="{ 'translate-y-0': menu }"
         >
           <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
+            <li class="mx-0.5 p-3 text-right">
+              <button
+                @click="menu = !menu"
+                class="
+                  text-slate-500
+                  hover:text-slate-900
+                  dark:hover:text-slate-300
+                "
+              >
+                <span class="text-2xl font-medium md:cursor-pointer">
+                  &times;
+                </span>
+              </button>
+            </li>
             <li
               v-for="(nav, idx) in navItems"
               :key="`${nav.path}_${idx}`"
-              class="mx-0.5"
+              class="mx-0.5 p-3"
             >
               <RouterLink
                 @click="menu = false"
                 class="
                   block
-                  px-4
-                  py-2
                   hover:bg-gray-100
                   focus:bg-sky-200
-                  dark:text-white
+                  dark:text-white dark:hover:text-black
                 "
                 :to="nav.path"
               >
                 {{ nav.name }}
               </RouterLink>
             </li>
-            <li class="flex items-center">
-              <div
-                class="
-                  block
-                  px-4
-                  py-2
-                  hover:bg-gray-100
-                  focus:bg-sky-200
-                  dark:text-white
-                "
-              >
-                Dark mode
-              </div>
+            <li class="mx-0.5 flex items-center p-3">
+              <div class="block dark:text-white">Dark mode</div>
               <div
                 @click="toggleDarkMode()"
                 class="
@@ -188,6 +169,71 @@
               </div>
             </li>
           </ul>
+        </div>
+      </li>
+      <li
+        v-for="(nav, idx) in navItems"
+        :key="`${nav.path}_${idx}`"
+        class="mx-0.5 p-3 hidden sm:block"
+      >
+        <RouterLink
+          @click="menu = false"
+          class="
+            block
+            hover:bg-gray-100
+            focus:bg-sky-200
+            dark:text-white dark:hover:text-black
+          "
+          :to="nav.path"
+        >
+          {{ nav.name }}
+        </RouterLink>
+      </li>
+      <li class="hidden mx-0.5 sm:flex items-baseline p-3">
+        <div class="block dark:text-white">Dark mode</div>
+        <div
+          @click="toggleDarkMode()"
+          class="
+            ml-2
+            flex
+            h-5
+            w-12
+            items-center
+            rounded-full
+            border border-slate-500
+            bg-slate-200
+            dark:bg-slate-600
+          "
+        >
+          <div
+            class="
+              delay-50
+              flex
+              h-5
+              w-5
+              transform
+              items-center
+              justify-center
+              rounded-full
+              bg-slate-50
+              shadow-lg
+              transition
+              dark:translate-x-7 dark:bg-black
+            "
+          >
+            <img
+              v-if="isDark"
+              class="h-3.5 w-3.5 rounded-full"
+              src="/img/icons/moon-white-24.png"
+              alt="Logo"
+            />
+            <img
+              v-else
+              class="h-3.5 w-3.5 rounded-full"
+              src="/img/icons/sun-black-24.png"
+              alt="Logo"
+            />
+          </div>
         </div>
       </li>
     </ul>
