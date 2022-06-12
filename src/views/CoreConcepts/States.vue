@@ -5,7 +5,7 @@
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
     <form class="y-8">
-      <TextBox label="Username" type="text" value="tbone" disabled />
+      <TextBox label="Username" type="text" value="tbone" readonly />
       <TextBox label="Email" type="email" value="tbone" />
       <TextBox label="Password" type="password" value="tbone" />
     </form>

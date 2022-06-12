@@ -9,8 +9,8 @@
   shadow-sm invalid:border-pink-500
   invalid:text-pink-600 focus:border-sky-500
   focus:outline-none focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500
-  focus:invalid:ring-pink-500 disabled:border-slate-200
-  disabled:bg-gray-100 disabled:text-slate-500 disabled:shadow-none dark:bg-slate-200;
+  focus:invalid:ring-pink-500 read-only:border-slate-200
+  read-only:bg-gray-100 disabled:text-slate-500 disabled:shadow-none dark:bg-slate-200;
 }
 
 .rounded-card {

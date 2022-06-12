@@ -4,7 +4,7 @@
     <input
       :type="type"
       :value="value"
-      :disabled="disabled"
+      :readonly="readonly"
       class="focus-error-text-box peer"
     />
     <p
@@ -36,7 +36,7 @@ export default {
       type: String,
       required: false,
     },
-    disabled: {
+    readonly: {
       type: Boolean,
       required: false,
     },
