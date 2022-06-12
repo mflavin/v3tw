@@ -1,34 +1,69 @@
 <template>
-  <main>
-    <ul class="flex">
-      <li
-        v-for="(nav, idx) in navItems"
-        :key="`${nav.path}_${idx}`"
-        class="mr-6"
-      >
-        <RouterLink
-          class="
-            rounded-card
-            my-4
-            block
-            px-6
-            py-2
-            ring-1 ring-slate-900/5
-            hover:bg-sky-500 hover:ring-sky-500
-          "
-          :to="nav.path"
+  <main class="h-full">
+    <div class="h-full bg-slate-50 dark:bg-slate-800">
+      <ul class="flex flex-wrap justify-around bg-slate-50 dark:bg-slate-800">
+        <li
+          class="mr-5 flex w-full flex-col items-end"
+          @click="toggleDarkMode()"
         >
-          {{ nav.name }}
-        </RouterLink>
-      </li>
-    </ul>
-    <RouterView :class="{ dark: isDark }" />
+          <div>
+            <span class="text-sm dark:text-white">Dark Mode</span>
+            <div
+              class="
+                ml-4
+                flex
+                h-5
+                w-10
+                items-center
+                rounded-full
+                bg-gray-300
+                dark:bg-blue-300
+              "
+            >
+              <div
+                class="
+                  h-4
+                  w-4
+                  transform
+                  rounded-full
+                  bg-slate-50
+                  shadow-md
+                  dark:translate-x-6
+                "
+              ></div>
+            </div>
+          </div>
+        </li>
+        <li
+          v-for="(nav, idx) in navItems"
+          :key="`${nav.path}_${idx}`"
+          class="mx-0.5"
+        >
+          <RouterLink
+            class="
+              rounded-card
+              my-4
+              block
+              px-6
+              py-2
+              ring-1 ring-slate-900/5
+              hover:bg-sky-500 hover:ring-sky-500
+              dark:text-white
+            "
+            :to="nav.path"
+          >
+            {{ nav.name }}
+          </RouterLink>
+        </li>
+      </ul>
+      <RouterView />
+    </div>
   </main>
 </template>
 
 <script>
 import { RouterLink, RouterView } from 'vue-router';
-import { mapState } from 'pinia';
+import { mapActions } from 'pinia';
 import { darkmode } from '@/stores/darkmode';
 
 export default {
@@ -42,8 +77,11 @@ export default {
       ],
     };
   },
-  computed: {
-    ...mapState(darkmode, ['isDark']),
+  created() {
+    this.updateDarkMode();
+  },
+  methods: {
+    ...mapActions(darkmode, ['toggleDarkMode', 'updateDarkMode']),
   },
 };
 </script>
@@ -51,6 +89,6 @@ export default {
 <style>
 /* @import "@/assets/base.css"; */
 body {
-  background-color: #eee;
+  min-height: 100vh;
 }
 </style>
