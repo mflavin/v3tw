@@ -62,7 +62,10 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.menu = !this.menu;
+      const menuStatus = !this.menu;
+      this.menu = menuStatus;
+      if (menuStatus) document.body.classList.add('overflow-hidden');
+      else document.body.classList.remove('overflow-hidden');
     },
   },
 };
