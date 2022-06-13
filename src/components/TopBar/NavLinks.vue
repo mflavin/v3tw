@@ -8,7 +8,7 @@
     <RouterLink
       @click="$emit('route-clicked')"
       class="
-        block whitespace-nowrap
+        block
         p-3
         hover:bg-gray-100
         focus:bg-sky-200

@@ -13,7 +13,7 @@
     <!-- Desktop style for nav -->
     <ul
       class="
-        container
+        lg:container
         mx-auto
         flex
         h-20
@@ -31,12 +31,12 @@
         />
       </li>
       <!-- Show mobile menu button until small viewport -->
-      <li class="mx-0.5 mt-3 sm:mx-0 sm:hidden">
+      <li class="mx-0.5 mt-3 sm:mx-0 lg:hidden">
         <NavMobileMenu @menu-clicked="toggleMenu" />
       </li>
       <!-- Hide nav links until small viewport -->
-      <NavLinks class="hidden sm:block" />
-      <li class="mx-0.5 hidden items-center p-3 sm:flex sm:items-baseline">
+      <NavLinks class="hidden lg:block" />
+      <li class="mx-0.5 hidden items-center p-3 lg:flex lg:items-baseline">
         <DarkModeSwitch />
       </li>
     </ul>
