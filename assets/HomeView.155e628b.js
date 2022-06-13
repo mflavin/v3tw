@@ -1,1 +1,0 @@
-import{T as e}from"./ToastBox.72804fc5.js";import{_ as t,r as s,o as n,c as r}from"./index.80867c46.js";const a={name:"HomeView",components:{ToastBox:e}};function c(p,i,m,_,f,x){const o=s("ToastBox");return n(),r(o,{title:"Tailwind CSS",text:"Going through the Core Concepts sections here"})}var h=t(a,[["render",c]]);export{h as default};
