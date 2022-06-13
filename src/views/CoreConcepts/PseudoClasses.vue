@@ -1,7 +1,7 @@
 <template>
   <main class="pt-5">
     <!-- https://tailwindcss.com/docs/utility-first -->
-    <Toast title="ChitChat" text="You have a new message!" />
+    <ToastBox title="ChitChat" text="You have a new message!" />
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
     <form class="y-8">
@@ -98,7 +98,7 @@
     <form class="rounded-card toast-card my-8">
       <div class="my-1 mx-auto rounded-full bg-slate-300">
         <img
-          class="h-16 w-16 m-2"
+          class="m-2 h-16 w-16"
           src="/img/icons/android-chrome-192x192.png"
           alt="Logo"
         />
@@ -111,7 +111,6 @@
             block
             w-full
             text-sm text-slate-500
-            dark:text-slate-300
             file:mr-4
             file:rounded-full
             file:border-0
@@ -122,6 +121,7 @@
             file:font-semibold
             file:text-violet-700
             hover:file:bg-violet-100
+            dark:text-slate-300
           "
         />
       </label>
@@ -132,14 +132,14 @@
       role="list"
       class="
         rounded-card
+        my-8
         list-disc
         space-y-3
-        my-8
         py-5
         pl-5
         text-slate-500
-        dark:text-slate-300
         marker:text-sky-400
+        dark:text-slate-300
       "
     >
       <li class="ml-5">5 cups chopped Porcini mushrooms</li>
@@ -235,13 +235,13 @@
 </template>
 
 <script>
-import Toast from '@/components/Toast.vue';
+import ToastBox from '@/components/ToastBox.vue';
 import TextBox from '@/components/TextBox.vue';
 
 export default {
-  name: 'State',
+  name: 'PseudoClasses',
   components: {
-    Toast,
+    ToastBox,
     TextBox,
   },
 };

@@ -9,15 +9,15 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (Home.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Home.vue'),
+      component: () => import('../views/HomeView.vue'),
     },
     {
-      path: '/coreconcepts/states',
-      name: 'states',
+      path: '/coreconcepts/pseudo-classes',
+      name: 'pseudoclasses',
       // route level code-splitting
       // this generates a separate chunk (Home.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CoreConcepts/States.vue'),
+      component: () => import('../views/CoreConcepts/PseudoClasses.vue'),
     },
     {
       path: '/coreconcepts/responsive-design',

@@ -1,17 +1,17 @@
 <template>
-  <Toast
+  <ToastBox
     title="Tailwind CSS"
     text="Going through the Core Concepts sections here"
   />
 </template>
 
 <script>
-import Toast from '@/components/Toast.vue';
+import ToastBox from '@/components/ToastBox.vue';
 
 export default {
-  name: 'Home',
+  name: 'HomeView',
   components: {
-    Toast,
+    ToastBox,
   },
 };
 </script>

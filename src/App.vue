@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import { RouterView } from 'vue-router';
 import TopBar from '@/components/TopBar.vue';
 import SideBar from '@/components/SideBar.vue';
 

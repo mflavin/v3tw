@@ -236,7 +236,6 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
 import { mapState, mapActions } from 'pinia';
 import { darkmode } from '@/stores/darkmode';
 
