@@ -1,9 +1,29 @@
 <template>
   <!-- Fixed nav -->
-  <nav class="fixed top-0 z-50 w-full">
+  <nav
+    class="
+      fixed
+      top-0
+      z-50
+      w-full
+      border-b-2 border-slate-300
+      dark:border-slate-700
+    "
+  >
     <!-- Desktop style for nav -->
-    <ul class="flex h-20 justify-between bg-slate-50 p-4 dark:bg-slate-800">
-      <li class="sm:w-36 md:w-2/6 lg:w-1/2">
+    <ul
+      class="
+        container
+        mx-auto
+        flex
+        h-20
+        justify-between
+        bg-slate-50
+        p-4
+        dark:bg-slate-800
+      "
+    >
+      <li class="sm:w-20 md:w-1/6 lg:w-5/12 xl:w-1/2">
         <img
           class="m-2 w-10 sm:w-12"
           src="/img/icons/android-chrome-192x192.png"

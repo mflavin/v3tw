@@ -1,7 +1,10 @@
 <template>
-  <div class="h-full bg-slate-50 pt-20 dark:bg-slate-800">
+  <div class="h-full bg-slate-50 pt-24 dark:bg-slate-800">
     <TopBar />
-    <RouterView />
+    <SideBar />
+    <main class="container mx-auto px-4 sm:px-6 md:px-8 lg:pl-80 xl:pr-60">
+      <RouterView />
+    </main>
   </div>
 </template>
 

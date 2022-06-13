@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-5">
+  <main>
     <!-- https://tailwindcss.com/docs/utility-first -->
     <ToastBox title="ChitChat" text="You have a new message!" />
 
