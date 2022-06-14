@@ -32,7 +32,7 @@
         />
       </li>
       <!-- Show mobile menu button until small viewport -->
-      <li class="mx-0.5 mt-3 sm:mx-0 lg:hidden">
+      <li class="my-2 mr-8 lg:hidden">
         <NavMobileMenu @menu-clicked="toggleMenu" />
       </li>
       <!-- Hide nav links until small viewport -->

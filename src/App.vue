@@ -26,6 +26,11 @@ import SideBar from '@/components/SideBar.vue';
 export default {
   name: 'app',
   components: { TopBar, SideBar },
+  created() {
+    // Add darkmode-transition class here to avoid first page load not syncing with color changes
+    // Also add delay for same reason
+    setTimeout(() => document.body.classList.add('darkmode-transition'), 150);
+  },
 };
 </script>
 

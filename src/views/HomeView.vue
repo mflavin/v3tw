@@ -1,8 +1,10 @@
 <template>
-  <ToastBox
-    title="Tailwind CSS"
-    text="Going through the Core Concepts sections here"
-  />
+  <main>
+    <ToastBox
+      title="Tailwind CSS"
+      text="Going through the Core Concepts sections here"
+    />
+  </main>
 </template>
 
 <script>

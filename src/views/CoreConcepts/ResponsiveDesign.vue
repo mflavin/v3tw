@@ -1,5 +1,5 @@
 <template>
-  <div class=" sm:max-w-2xl">
+  <div class="sm:max-w-2xl">
     <div class="sm:flex rounded-card">
       <div class="sm:shrink-0">
         <img

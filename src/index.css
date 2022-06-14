@@ -53,12 +53,11 @@
 
 .rounded-card {
   @apply mx-auto
-          max-w-xs
+          max-w-2xl
           rounded-xl
           bg-white
           shadow-md
           dark:bg-slate-900
-          md:max-w-2xl;
 }
 
 .toast-card {
