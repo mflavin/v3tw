@@ -1,6 +1,6 @@
 <template>
-  <div class="sm:max-w-2xl">
-    <div class="sm:flex rounded-card">
+  <main>
+    <div class="rounded-card sm:flex">
       <div class="sm:shrink-0">
         <img
           class="
@@ -41,7 +41,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
