@@ -1,35 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
+const HomeView = () => import('@/views/HomeView.vue');
+const PseudoClasses = () => import('@/views/CoreConcepts/PseudoClasses.vue');
+const ResponsiveDesign = () =>
+  import('@/views/CoreConcepts/ResponsiveDesign.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/:pathMatch(.*)*',
-      redirect: '/',
-    },
-    {
       path: '/',
       name: 'home',
-      // route level code-splitting
-      // this generates a separate chunk (Home.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HomeView.vue'),
+      component: HomeView,
     },
     {
       path: '/coreconcepts/pseudo-classes',
       name: 'pseudoclasses',
-      // route level code-splitting
-      // this generates a separate chunk (Home.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CoreConcepts/PseudoClasses.vue'),
+      component: PseudoClasses,
     },
     {
       path: '/coreconcepts/responsive-design',
       name: 'responsivedesign',
-      // route level code-splitting
-      // this generates a separate chunk (Home.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CoreConcepts/ResponsiveDesign.vue'),
+      component: ResponsiveDesign,
     },
   ],
 });
