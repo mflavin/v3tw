@@ -1,14 +1,14 @@
 <template>
-  <div class="rounded-card md:max-w-2xl">
-    <div class="md:flex">
-      <div class="md:shrink-0">
+  <div class=" sm:max-w-2xl">
+    <div class="sm:flex rounded-card">
+      <div class="sm:shrink-0">
         <img
           class="
             h-48
             w-full
             rounded
             object-fill
-            md:h-full md:w-48 md:object-cover
+            sm:h-full sm:w-48 sm:object-cover
           "
           src="/img/art.png"
           alt="Logo"

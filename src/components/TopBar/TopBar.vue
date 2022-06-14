@@ -8,24 +8,25 @@
       w-full
       border-b-2 border-slate-300
       dark:border-slate-700
+      2xl:pl-16
     "
   >
     <!-- Desktop style for nav -->
     <ul
       class="
-        lg:container
+        darkmode-transition
         mx-auto
         flex
-        h-20
+        h-topbar
+        items-center
         justify-between
         bg-slate-50
-        p-4
         dark:bg-slate-800
       "
     >
-      <li class="sm:w-20 md:w-1/6 lg:w-5/12 xl:w-1/2">
+      <li class="lg:w-full">
         <img
-          class="m-2 w-10 sm:w-12"
+          class="my-2 ml-8 w-10"
           src="/img/icons/android-chrome-192x192.png"
           alt="Logo"
         />
@@ -36,11 +37,10 @@
       </li>
       <!-- Hide nav links until small viewport -->
       <NavLinks class="hidden lg:block" />
-      <li class="mx-0.5 hidden items-center p-3 lg:flex lg:items-baseline">
+      <li class="mx-0.5 hidden items-center p-3 lg:flex">
         <DarkModeSwitch />
       </li>
     </ul>
-    <!-- Mobile menu sheet from below -->
     <SheetFromBelow :menu="menu">
       <!-- Mobile menu styles -->
       <ul class="py-1 text-gray-700 dark:text-gray-200">
@@ -57,7 +57,7 @@
             <span class="text-2xl font-medium md:cursor-pointer">&times;</span>
           </button>
         </li>
-        <NavLinks @route-clicked="toggleMenu" class="block" />
+        <NavLinks @route-clicked="toggleMenu" />
         <li class="mx-0.5 flex items-center p-3">
           <DarkModeSwitch />
         </li>

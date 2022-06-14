@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.darkmode-transition {
+  @apply transition-colors duration-500 ease-in-out;
+}
+
 .focus-error-text-box {
   @apply mt-1
           block

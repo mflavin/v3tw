@@ -1,22 +1,36 @@
 <template>
-  <div
+  <aside
     class="
       fixed
-      inset-0
-      top-[3.8125rem]
-      left-[max(0px,calc(50%-45rem))]
-      right-auto
-      z-20
+      bottom-0
+      top-topbar
       hidden
-      w-[19.5rem]
-      overflow-y-auto
-      px-8
-      pb-10
+      w-sidebar
+      overflow-y-scroll
+      p-8
+      pb-24
       lg:block
     "
   >
-    <span class="mt-20 fixed">Sidebar</span>
-  </div>
+    <nav>
+      <ul>
+        <li
+          v-for="(x, idx) in ' 1 '.repeat(100).split('1')"
+          :key="idx"
+          class="
+            py-1
+            text-sm text-slate-500
+            hover:text-indigo-300
+            focus:bg-sky-200
+            dark:text-slate-300 dark:hover:text-indigo-500
+            sm:rounded-lg
+          "
+        >
+          {{ idx }}
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </template>
 
 <script>

@@ -2,7 +2,14 @@ module.exports = {
   darkMode: 'class',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        topbar: '3.5rem',
+        sidebarmobile: '20rem',
+        sidebar: '17rem',
+        content: '4rem',
+      },
+    },
   },
   plugins: [],
 };

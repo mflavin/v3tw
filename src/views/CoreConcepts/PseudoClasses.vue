@@ -4,10 +4,10 @@
     <ToastBox title="ChitChat" text="You have a new message!" />
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
-    <form class="y-8">
-      <TextBox label="Username" type="text" value="tbone" readonly />
-      <TextBox label="Email" type="email" value="tbone" />
-      <TextBox label="Password" type="password" value="tbone" />
+    <form class="py-8">
+      <TextBox class="py-2" label="Username" type="text" value="tbone" readonly />
+      <TextBox class="py-2" label="Email" type="email" value="tbone" />
+      <TextBox class="py-2" label="Password" type="password" value="tbone" />
     </form>
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state -->
@@ -50,7 +50,7 @@
     </a>
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state -->
-    <form class="py-8">
+    <form class="pt-8">
       <TextBox
         label="Email"
         type="email"
@@ -59,7 +59,7 @@
     </form>
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#before-and-after -->
-    <label class="mx-2 block py-8">
+    <label class="mx-2 block pb-8">
       <span
         class="block text-sm font-medium text-slate-700 dark:text-slate-300"
       >
@@ -119,7 +119,7 @@
             file:px-4
             file:text-sm
             file:font-semibold
-            file:text-violet-700
+            file:text-indigo-500
             hover:file:bg-violet-100
             dark:text-slate-300
           "

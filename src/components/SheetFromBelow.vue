@@ -1,4 +1,5 @@
 <template>
+  <!-- Mobile menu sheet from below -->
   <div
     class="
       fixed
@@ -15,6 +16,7 @@
       transition-transform
       delay-100
       dark:bg-gray-700
+      lg:hidden
     "
     :class="{ 'translate-y-0': menu }"
   >

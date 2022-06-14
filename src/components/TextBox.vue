@@ -1,5 +1,5 @@
 <template>
-  <label class="mx-2 block">
+  <label v-on="$attrs" class="mx-2 block">
     <span class="block font-medium text-slate-700 dark:text-slate-300">
       {{ label }}
     </span>

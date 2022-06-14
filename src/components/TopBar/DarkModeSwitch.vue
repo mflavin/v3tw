@@ -1,8 +1,17 @@
 <template>
-  <div class="contents lg:cursor-pointer">
-    <div class="block dark:text-white">Dark mode</div>
+  <div class="contents lg:cursor-pointer" @click="toggleDarkMode()">
     <div
-      @click="toggleDarkMode()"
+      class="
+        hidden
+        whitespace-nowrap
+        hover:text-indigo-300
+        dark:text-white dark:hover:text-indigo-500
+        xl:block
+      "
+    >
+      Dark mode
+    </div>
+    <div
       class="
         ml-2
         flex
