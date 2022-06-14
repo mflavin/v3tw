@@ -5,7 +5,13 @@
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#form-states -->
     <form class="py-8">
-      <TextBox class="py-2" label="Username" type="text" value="tbone" readonly />
+      <TextBox
+        class="py-2"
+        label="Username"
+        type="text"
+        value="tbone"
+        readonly
+      />
       <TextBox class="py-2" label="Email" type="email" value="tbone" />
       <TextBox class="py-2" label="Password" type="password" value="tbone" />
     </form>
@@ -201,7 +207,7 @@
       </p>
     </div>
 
-    <div class="mx-auto max-w-xs py-8 md:max-w-2xl">
+    <div class="mx-auto max-w-2xl py-8">
       <details
         class="
           group
