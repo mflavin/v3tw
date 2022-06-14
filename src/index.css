@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-sheet {
+  @apply fixed
+      left-0
+      z-50
+      h-full
+      w-full
+      divide-y divide-gray-100
+      rounded
+      bg-slate-50
+      shadow
+      transition-transform
+      ease-in-out
+      delay-100
+      duration-300
+      dark:bg-gray-700
+      lg:hidden;
+}
+
 .darkmode-transition {
   @apply transition-colors duration-500 ease-in-out;
 }

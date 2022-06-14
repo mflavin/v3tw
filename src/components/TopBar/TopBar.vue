@@ -41,7 +41,7 @@
         <DarkModeSwitch />
       </li>
     </ul>
-    <SheetFromBelow :menu="menu">
+    <SheetFromDirection :menu="menu" direction="top">
       <!-- Mobile menu styles -->
       <ul class="py-1 text-gray-700 dark:text-gray-200">
         <li class="mx-0.5 text-right">
@@ -62,7 +62,7 @@
           <DarkModeSwitch />
         </li>
       </ul>
-    </SheetFromBelow>
+    </SheetFromDirection>
   </nav>
 </template>
 
@@ -70,11 +70,11 @@
 import DarkModeSwitch from './DarkModeSwitch.vue';
 import NavLinks from './NavLinks.vue';
 import NavMobileMenu from './NavMobileMenu.vue';
-import SheetFromBelow from '@/components/SheetFromBelow.vue';
+import SheetFromDirection from '@/components/SheetFromDirection.vue';
 
 export default {
   name: 'TopBar',
-  components: { DarkModeSwitch, NavLinks, NavMobileMenu, SheetFromBelow },
+  components: { DarkModeSwitch, NavLinks, NavMobileMenu, SheetFromDirection },
   data() {
     return {
       menu: false,
