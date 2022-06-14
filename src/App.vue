@@ -13,8 +13,8 @@
     <div class="2xl:w-28 2xl:pl-20">
       <SideBar />
     </div>
-    <main class="container mx-auto lg:pl-sidebar">
-      <RouterView class="p-content" />
+    <main class="w-full md:container md:mx-auto lg:pl-sidebar">
+      <RouterView class="px-6 py-8 md:p-content" />
     </main>
   </div>
 </template>
