@@ -3,6 +3,7 @@
     <div
       class="
         -mt-2
+        h-0
         w-full
         text-right text-slate-500
         hover:text-slate-900
@@ -11,7 +12,7 @@
     >
       <span
         @click="close()"
-        class="text-2xl font-medium md:cursor-pointer"
+        class="text-2xl font-medium lg:cursor-pointer"
         aria-hidden="true"
       >
         &times;

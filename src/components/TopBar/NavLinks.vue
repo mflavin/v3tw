@@ -11,10 +11,10 @@
         block
         whitespace-nowrap
         p-3
-        hover:text-indigo-300
-        focus:bg-sky-200
-        dark:text-white dark:hover:text-indigo-500
-        sm:rounded-lg
+        leading-6
+        hover:text-indigo-500
+        dark:text-white dark:hover:text-indigo-400
+        lg:p-0 font-semibold
       "
       :to="nav.path"
     >

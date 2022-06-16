@@ -23,6 +23,7 @@
         justify-between
         bg-slate-50
         dark:bg-slate-800
+        space-x-8
       "
     >
       <li class="lg:w-full">
@@ -38,7 +39,7 @@
       </li>
       <!-- Hide nav links until small viewport -->
       <NavLinks class="hidden lg:block" />
-      <li class="mx-0.5 hidden items-center p-3 lg:flex">
+      <li class="mx-0.5 hidden items-center pr-3 lg:flex">
         <DarkModeSwitch />
       </li>
     </ul>
@@ -55,7 +56,7 @@
               dark:hover:text-slate-300
             "
           >
-            <span class="text-2xl font-medium md:cursor-pointer">&times;</span>
+            <span class="text-2xl font-medium lg:cursor-pointer">&times;</span>
           </button>
         </li>
         <NavLinks @route-clicked="toggleMenu" />

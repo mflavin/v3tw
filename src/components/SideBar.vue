@@ -69,29 +69,28 @@
               "
             >
               <li
-                v-for="(x, idx) in [
-                  'First Page',
-                  'Second Page',
-                  'Third Page',
-                  'Fourth Page',
-                  'Fifth Page',
-                ]"
-                :key="idx"
+                v-for="(nav, idx) in navItems"
+                :key="`${nav.path}_${idx}`"
                 class="
                   -ml-px
                   block
                   border-l border-transparent
                   py-1
                   pl-4
-                  text-sm text-slate-700
-                  hover:border-slate-700 hover:text-indigo-300
+                  text-sm
+                  hover:border-slate-700 hover:text-indigo-500
                   focus:bg-sky-200
-                  dark:text-slate-300
-                  dark:hover:border-slate-300
-                  dark:hover:text-indigo-500
+                  dark:hover:border-slate-300 dark:hover:text-indigo-400
+                "
+                :class="
+                  nav.path === $route.path
+                    ? 'text-indigo-500 dark:text-indigo-400'
+                    : 'text-slate-700 dark:text-slate-300'
                 "
               >
-                {{ x }}
+                <RouterLink @click="$emit('route-clicked')" :to="nav.path">
+                  {{ nav.name }}
+                </RouterLink>
               </li>
             </ul>
           </li>
@@ -109,6 +108,11 @@ export default {
   data() {
     return {
       menu: false,
+      navItems: [
+        { name: 'Home', path: '/' },
+        { name: 'Pseudo Classes', path: '/coreconcepts/pseudo-classes' },
+        { name: 'Responsive Design', path: '/coreconcepts/responsive-design' },
+      ],
     };
   },
 };

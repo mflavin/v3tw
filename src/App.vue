@@ -1,7 +1,7 @@
 <template>
   <div class="darkmode-transition bg-slate-50 pt-topbar dark:bg-slate-800">
     <TopBar />
-    <div class="mx-auto max-w-8xl px-4 sm:px-6 md:px-8 pt-topbar">
+    <div class="mx-auto max-w-8xl px-4 pt-topbar sm:px-6 md:px-8">
       <SideBar />
       <div class="lg:pl-sidebar">
         <RouterView class="max-w-3xl" />
@@ -41,7 +41,10 @@ body {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  font-family: var(--vt-font-family-base);
+  font-family: Inter var, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
   letter-spacing: 0.2px;
   line-height: 24px;
   font-size: 16px;

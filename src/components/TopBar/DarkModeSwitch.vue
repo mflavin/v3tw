@@ -4,9 +4,9 @@
       class="
         hidden
         whitespace-nowrap
-        hover:text-indigo-300
-        dark:text-white dark:hover:text-indigo-500
-        xl:block
+        hover:text-indigo-500
+        dark:text-white dark:hover:text-indigo-400
+        xl:block font-semibold
       "
     >
       Dark mode
