@@ -10,10 +10,10 @@
     "
   >
     <TopBar />
-    <div class="2xl:w-28 2xl:pl-20">
+    <div class="lg:pr-sidebar 2xl:w-28 2xl:pl-20">
       <SideBar />
     </div>
-    <main class="w-full md:container md:mx-auto lg:pl-sidebar">
+    <main class="w-full md:container md:mx-auto">
       <RouterView class="px-6 py-8 md:p-content" />
     </main>
   </div>
@@ -36,7 +36,29 @@ export default {
 
 <style>
 /* @import "@/assets/base.css"; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
 body {
+  width: 100%;
+  min-width: 320px;
   min-height: 100vh;
+  font-family: var(--vt-font-family-base);
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  direction: ltr;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

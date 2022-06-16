@@ -1,6 +1,6 @@
 <template>
-  <!-- Mobile menu sheet from below -->
-  <div class="nav-sheet" :class="classObject">
+  <!-- Mobile menu sheet from direction -->
+  <div v-on="$attrs" class="nav-sheet" :class="classObject">
     <slot></slot>
   </div>
 </template>

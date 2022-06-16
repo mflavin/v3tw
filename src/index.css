@@ -13,9 +13,9 @@
       bg-slate-50
       shadow
       transition-transform
-      ease-in-out
       delay-100
       duration-300
+      ease-in-out
       dark:bg-gray-700
       lg:hidden;
 }
@@ -57,7 +57,7 @@
           rounded-xl
           bg-white
           shadow-md
-          dark:bg-slate-900
+          dark:bg-slate-900;
 }
 
 .toast-card {

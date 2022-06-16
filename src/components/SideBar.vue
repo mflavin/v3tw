@@ -1,6 +1,6 @@
 <template>
   <main>
-    <SheetFromDirection :menu="menu" direction="left">
+    <SheetFromDirection class="lg:hidden" :menu="menu" direction="left">
       <aside
         class="
           fixed
@@ -9,8 +9,10 @@
           hidden
           w-sidebar
           overflow-y-scroll
+          border-r-[1px] border-slate-300
           p-8
           pb-24
+          dark:border-slate-700
           lg:block
         "
       >
@@ -42,8 +44,10 @@
         hidden
         w-sidebar
         overflow-y-scroll
+        border-r-[1px] border-slate-300
         p-8
         pb-24
+        dark:border-slate-700
         lg:block
       "
     >

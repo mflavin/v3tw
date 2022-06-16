@@ -6,7 +6,7 @@
       top-0
       z-50
       w-full
-      border-b-2 border-slate-300
+      border-b-[1px] border-slate-300
       dark:border-slate-700
       2xl:pl-16
     "
