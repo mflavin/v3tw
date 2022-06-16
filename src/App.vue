@@ -1,18 +1,11 @@
 <template>
-  <div
-    class="
-      darkmode-transition
-      flex
-      h-full
-      bg-slate-50
-      pt-topbar
-      dark:bg-slate-800
-    "
-  >
+  <div class="darkmode-transition bg-slate-50 pt-topbar dark:bg-slate-800">
     <TopBar />
-    <SideBar class="lg:pr-sidebar 2xl:w-28 2xl:pl-60" />
-    <div class="w-full px-6 py-8 md:p-content">
-      <RouterView class="max-w-2xl" />
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 md:px-8 pt-topbar">
+      <SideBar />
+      <div class="lg:pl-sidebar">
+        <RouterView class="max-w-3xl" />
+      </div>
     </div>
   </div>
 </template>

@@ -5,9 +5,13 @@ module.exports = {
     extend: {
       spacing: {
         topbar: '3.5rem',
-        sidebarmobile: '20rem',
-        sidebar: '20rem',
+        sidebarmobile: '19.5rem',
+        sidebar: '19.5rem',
         content: '4rem',
+        '8xl': '90rem',
+      },
+      maxWidth: {
+        '8xl': '90rem',
       },
     },
   },

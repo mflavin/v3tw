@@ -9,7 +9,6 @@
       w-full
       border-b-[1px] border-slate-300
       dark:border-slate-700
-      2xl:pl-16
     "
   >
     <!-- Desktop style for nav -->
@@ -19,6 +18,7 @@
         mx-auto
         flex
         h-topbar
+        max-w-8xl
         items-center
         justify-between
         bg-slate-50
