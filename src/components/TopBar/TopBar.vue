@@ -1,6 +1,7 @@
 <template>
   <!-- Fixed nav -->
   <nav
+    v-on="$attrs"
     class="
       fixed
       top-0

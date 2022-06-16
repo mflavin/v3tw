@@ -6,7 +6,7 @@ module.exports = {
       spacing: {
         topbar: '3.5rem',
         sidebarmobile: '20rem',
-        sidebar: '17rem',
+        sidebar: '20rem',
         content: '4rem',
       },
     },

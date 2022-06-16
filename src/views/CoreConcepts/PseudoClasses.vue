@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <!-- https://tailwindcss.com/docs/utility-first -->
     <ToastBox title="ChitChat" text="You have a new message!" />
 
@@ -22,7 +22,6 @@
       class="
         rounded-card
         group
-        my-4
         block
         p-6
         py-8
@@ -60,12 +59,13 @@
       <TextBox
         label="Email"
         type="email"
+        placeholder="email"
         peer="Please provide a valid email address."
       />
     </form>
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#before-and-after -->
-    <label class="mx-2 block pb-8">
+    <label class="pb-8">
       <span
         class="block text-sm font-medium text-slate-700 dark:text-slate-300"
       >
@@ -109,7 +109,7 @@
           alt="Logo"
         />
       </div>
-      <label class="my-2 mx-4 block">
+      <label class="my-2 block pl-8">
         <span class="sr-only">Choose profile photo</span>
         <input
           type="file"
@@ -207,7 +207,7 @@
       </p>
     </div>
 
-    <div class="mx-auto max-w-2xl py-8">
+    <div class="rounded-card my-8">
       <details
         class="
           group
@@ -237,7 +237,7 @@
         </div>
       </details>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

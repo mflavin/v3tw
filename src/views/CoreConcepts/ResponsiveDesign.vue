@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <div class="rounded-card sm:flex">
       <div class="sm:shrink-0">
         <img
@@ -41,7 +41,7 @@
         </p>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

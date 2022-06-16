@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div v-on="$attrs">
     <SheetFromDirection class="lg:hidden" :menu="menu" direction="left">
       <aside
         class="
@@ -70,7 +70,7 @@
         </ul>
       </nav>
     </aside>
-  </main>
+  </div>
 </template>
 
 <script>

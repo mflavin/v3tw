@@ -10,12 +10,10 @@
     "
   >
     <TopBar />
-    <div class="lg:pr-sidebar 2xl:w-28 2xl:pl-20">
-      <SideBar />
+    <SideBar class="lg:pr-sidebar 2xl:w-28 2xl:pl-60" />
+    <div class="w-full px-6 py-8 md:p-content">
+      <RouterView class="max-w-2xl" />
     </div>
-    <main class="w-full md:container md:mx-auto">
-      <RouterView class="px-6 py-8 md:p-content" />
-    </main>
   </div>
 </template>
 

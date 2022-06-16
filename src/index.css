@@ -52,16 +52,11 @@
 }
 
 .rounded-card {
-  @apply mx-auto
-          max-w-2xl
-          rounded-xl
-          bg-white
-          shadow-md
-          dark:bg-slate-900;
+  @apply mx-auto rounded-xl bg-white shadow-md dark:bg-slate-900;
 }
 
 .toast-card {
-  @apply flex flex-wrap items-center space-x-4 p-6 pt-2;
+  @apply flex max-w-sm flex-wrap items-center space-x-4 p-6 pt-2;
 }
 
 .hamburgerlines {

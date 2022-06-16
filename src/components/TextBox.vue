@@ -1,5 +1,5 @@
 <template>
-  <label v-on="$attrs" class="mx-2 block">
+  <label v-on="$attrs">
     <span class="block font-medium text-slate-700 dark:text-slate-300">
       {{ label }}
     </span>
@@ -7,6 +7,7 @@
       :type="type"
       :value="value"
       :readonly="readonly"
+      :placeholder="placeholder"
       class="focus-error-text-box peer"
     />
     <p v-if="peer" class="invisible mt-2 text-pink-600 peer-invalid:visible">
@@ -37,6 +38,10 @@ export default {
     },
     readonly: {
       type: Boolean,
+      required: false,
+    },
+    placeholder: {
+      type: String,
       required: false,
     },
   },
