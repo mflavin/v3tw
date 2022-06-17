@@ -47,8 +47,10 @@
         hidden
         w-[19.5rem]
         overflow-y-auto
+        border-r-[1px] border-slate-300
         px-8
         pb-10
+        dark:border-slate-700
         lg:block
       "
     >

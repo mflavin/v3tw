@@ -14,7 +14,7 @@
         leading-6
         hover:text-indigo-500
         dark:text-white dark:hover:text-indigo-400
-        lg:p-0 font-semibold
+        lg:p-0 font-semibold text-sm
       "
       :to="nav.path"
     >

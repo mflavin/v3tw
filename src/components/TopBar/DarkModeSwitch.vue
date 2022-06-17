@@ -7,6 +7,7 @@
         hover:text-indigo-500
         dark:text-white dark:hover:text-indigo-400
         xl:block font-semibold
+        text-sm
       "
     >
       Dark mode
