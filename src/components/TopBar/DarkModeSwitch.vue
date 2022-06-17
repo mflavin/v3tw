@@ -1,12 +1,13 @@
 <template>
-  <div class="contents lg:cursor-pointer" @click="toggleDarkMode()">
+  <div class="contents cursor-pointer" @click="toggleDarkMode()">
     <div
       class="
         hidden
         whitespace-nowrap
         hover:text-indigo-500
         dark:text-white dark:hover:text-indigo-400
-        xl:block font-semibold
+        font-semibold
+        xl:block
         text-sm
       "
     >

@@ -1,10 +1,10 @@
 <template>
-  <div class="darkmode-transition bg-slate-50 pt-topbar dark:bg-slate-800">
+  <div class="bg-slate-50 dark:bg-slate-800">
     <TopBar />
-    <div class="mx-auto max-w-8xl px-4 pt-topbar sm:px-6 md:px-8">
-      <SideBar />
+    <SideBar />
+    <div class="mx-auto max-w-8xl px-4 pt-topbar sm:px-6 md:px-8 lg:pt-28">
       <div class="lg:pl-sidebar">
-        <RouterView class="max-w-3xl" />
+        <RouterView class="mx-auto max-w-3xl lg:mx-0" />
       </div>
     </div>
   </div>
@@ -18,9 +18,9 @@ export default {
   name: 'app',
   components: { TopBar, SideBar },
   created() {
-    // Add darkmode-transition class here to avoid first page load not syncing with color changes
+    // Remove transition-none class here to avoid first page load not syncing with color changes
     // Also add delay for same reason
-    setTimeout(() => document.body.classList.add('darkmode-transition'), 150);
+    setTimeout(() => document.body.classList.remove('transition-none'), 150);
   },
 };
 </script>

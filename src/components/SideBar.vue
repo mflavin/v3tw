@@ -1,41 +1,41 @@
 <template>
   <div v-on="$attrs">
-    <SheetFromDirection class="lg:hidden" :menu="menu" direction="left">
-      <aside
+    <nav
+      class="
+        sticky
+        top-0
+        z-10
+        border-b-[1px] border-slate-300
+        bg-slate-50
+        dark:border-slate-700 dark:bg-slate-800
+        lg:hidden
+      "
+    >
+      <button
+        @click="toggleMenu"
+        type="button"
         class="
-          fixed
-          bottom-0
-          top-topbar
-          hidden
-          w-sidebar
-          overflow-y-scroll
-          border-r-[1px] border-slate-300
-          p-8
-          pb-24
-          dark:border-slate-700
-          lg:block
+          peer
+          my-2
+          mx-8
+          inline-flex
+          items-center
+          rounded-lg
+          text-sm text-slate-500
+          hover:bg-slate-50
+          dark:text-slate-300 dark:hover:bg-gray-700
         "
       >
-        <nav>
-          <ul>
-            <li
-              v-for="(x, idx) in ' 1 '.repeat(100).split('1')"
-              :key="idx"
-              class="
-                py-1
-                text-sm text-slate-700
-                hover:text-indigo-300
-                focus:bg-sky-200
-                dark:text-slate-300 dark:hover:text-indigo-500
-                sm:rounded-lg
-              "
-            >
-              {{ idx }}
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </SheetFromDirection>
+        <IconMenu />
+        <span class="ml-2">Menu</span>
+      </button>
+    </nav>
+    <!-- Overlay to allow for click away to close menu -->
+    <div
+      v-if="menu"
+      class="fixed top-0 left-0 z-[999] h-full w-full bg-slate-900 opacity-75"
+      @click="menu = false"
+    />
     <aside
       class="
         fixed
@@ -43,15 +43,17 @@
         top-[3.8125rem]
         left-[max(0px,calc(50%-45rem))]
         right-auto
-        z-20
-        hidden
-        w-[19.5rem]
+        z-10
+        w-sidebar
         overflow-y-auto
         border-r-[1px] border-slate-300
         px-8
         pb-10
         dark:border-slate-700
         lg:block
+      "
+      :class="
+        menu ? 'z-[999] -mt-16 block bg-white dark:bg-slate-800' : 'hidden'
       "
     >
       <nav class="relative lg:text-sm lg:leading-6">
@@ -103,10 +105,12 @@
 </template>
 
 <script>
-import SheetFromDirection from '@/components/SheetFromDirection.vue';
+import IconMenu from '@/components/icons/IconMenu.vue';
 export default {
   name: 'SideBar',
-  components: { SheetFromDirection },
+  components: {
+    IconMenu,
+  },
   data() {
     return {
       menu: false,
@@ -116,6 +120,11 @@ export default {
         { name: 'Responsive Design', path: '/coreconcepts/responsive-design' },
       ],
     };
+  },
+  methods: {
+    toggleMenu() {
+      this.menu = !this.menu;
+    },
   },
 };
 </script>

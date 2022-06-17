@@ -12,7 +12,7 @@
     >
       <span
         @click="close()"
-        class="text-2xl font-medium lg:cursor-pointer"
+        class="text-2xl font-medium cursor-pointer"
         aria-hidden="true"
       >
         &times;

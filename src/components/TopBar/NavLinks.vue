@@ -1,20 +1,23 @@
 <template>
   <li
+    v-bind="$attrs"
     v-for="(nav, idx) in navItems"
     :key="`${nav.path}_${idx}`"
     class="mx-0.5"
-    v-bind="$attrs"
   >
     <RouterLink
       @click="$emit('route-clicked')"
       class="
         block
         whitespace-nowrap
-        p-3
+        px-3
+        py-1
+        text-sm
+        font-semibold
         leading-6
         hover:text-indigo-500
         dark:text-white dark:hover:text-indigo-400
-        lg:p-0 font-semibold text-sm
+        lg:p-0
       "
       :to="nav.path"
     >
