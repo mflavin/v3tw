@@ -36,7 +36,7 @@
       <!-- Show mobile menu button until small viewport -->
       <li class="my-2 mr-8 lg:hidden">
         <button
-          @click="toggleMenu"
+          @click="toggleMenu()"
           type="button"
           class="
             m-2
@@ -52,6 +52,7 @@
           <IconSettings />
         </button>
         <div
+          v-if="menu"
           class="
             fixed
             top-8
@@ -71,7 +72,7 @@
             ease-in-out
             dark:divide-gray-600 dark:bg-gray-700
           "
-          :class="menu ? 'opacity-100 ' : 'opacity-0'"
+          :class="show ? 'opacity-100' : 'opacity-0'"
         >
           <div class="py-2 px-5">
             <div class="flex h-5 items-center justify-between">
@@ -118,7 +119,7 @@
         <div
           v-if="menu"
           class="fixed top-0 left-0 z-10 h-full w-full"
-          @click="menu = false"
+          @click="toggleMenu()"
         ></div>
       </li>
       <!-- Hide nav links until small viewport -->
@@ -144,12 +145,15 @@ export default {
   },
   data() {
     return {
+      show: false,
       menu: false,
     };
   },
   methods: {
     toggleMenu() {
-      this.menu = !this.menu;
+      if (!this.menu) this.menu = !this.menu;
+      else setTimeout(() => (this.menu = !this.menu), 300);
+      setTimeout(() => (this.show = !this.show), 0);
     },
   },
 };

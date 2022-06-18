@@ -33,11 +33,13 @@
   </div>
   <!-- Overlay to allow for click away to close menu -->
   <div
+    v-if="menu"
     class="top-0 left-0 z-[99] h-full w-full"
-    :class="{ 'fixed bg-slate-900 opacity-75': menu }"
-    @click="menu = false"
+    :class="{ 'fixed bg-slate-900 opacity-75': show }"
+    @click="toggleMenu()"
   />
   <aside
+    v-if="menu"
     class="
       fixed
       inset-0
@@ -65,7 +67,7 @@
       lg:bg-transparent
       lg:dark:bg-transparent
     "
-    :class="{ 'top-0 -translate-x-[0px]': menu }"
+    :class="{ 'top-0 -translate-x-[0px]': show }"
   >
     <nav class="relative lg:text-sm lg:leading-6">
       <ul>
@@ -120,6 +122,7 @@ export default {
   },
   data() {
     return {
+      show: false,
       menu: false,
       navItems: [
         { name: 'Home', path: '/' },
@@ -130,7 +133,9 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.menu = !this.menu;
+      if (!this.menu) this.menu = !this.menu;
+      else setTimeout(() => (this.menu = !this.menu), 300);
+      setTimeout(() => (this.show = !this.show), 0);
     },
   },
 };
