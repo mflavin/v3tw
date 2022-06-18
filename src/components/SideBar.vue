@@ -58,7 +58,12 @@
       duration-300
       ease-in-out
       dark:border-slate-700 dark:bg-slate-800
+      lg:z-10
+      lg:mt-0
       lg:block
+      lg:translate-x-0
+      lg:bg-transparent
+      lg:dark:bg-transparent
     "
     :class="{ 'top-0 -translate-x-[0px]': menu }"
   >

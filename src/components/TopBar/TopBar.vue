@@ -25,11 +25,13 @@
       "
     >
       <li class="lg:w-full">
-        <img
-          class="my-2 ml-8 w-10"
-          src="/img/icons/android-chrome-192x192.png"
-          alt="Logo"
-        />
+        <a href="/" class="transition duration-300 hover:opacity-75">
+          <img
+            class="my-2 ml-8 w-10"
+            src="/img/icons/android-chrome-192x192.png"
+            alt="Logo"
+          />
+        </a>
       </li>
       <!-- Show mobile menu button until small viewport -->
       <li class="my-2 mr-8 lg:hidden">

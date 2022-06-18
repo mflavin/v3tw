@@ -1,5 +1,9 @@
 <template>
-  <div v-on="$attrs" class="flex cursor-pointer" @click="toggleDarkMode()">
+  <div
+    v-on="$attrs"
+    class="flex cursor-pointer select-none"
+    @click="toggleDarkMode()"
+  >
     <div
       class="
         whitespace-nowrap
@@ -22,7 +26,7 @@
         items-center
         rounded-full
         border border-slate-500
-        bg-slate-200
+        bg-slate-100
         hover:border-slate-700
         dark:bg-slate-600 dark:hover:border-slate-300
       "
@@ -43,18 +47,8 @@
           dark:translate-x-7 dark:bg-black
         "
       >
-        <img
-          v-if="isDark"
-          class="h-3.5 w-3.5 rounded-full"
-          src="/img/icons/moon-white-24.png"
-          alt="Logo"
-        />
-        <img
-          v-else
-          class="h-3.5 w-3.5 rounded-full"
-          src="/img/icons/sun-black-24.png"
-          alt="Logo"
-        />
+        <IconMoon class="h-3.5 w-3.5 rounded-full text-white" v-if="isDark" />
+        <IconSun class="h-3.5 w-3.5 rounded-full" v-else />
       </div>
     </div>
   </div>
@@ -63,9 +57,11 @@
 <script>
 import { mapState, mapActions } from 'pinia';
 import { darkmode } from '@/stores/darkmode';
+import { IconSun, IconMoon } from '@/components/icons';
 
 export default {
   name: 'DarkModeSwitch',
+  components: { IconSun, IconMoon },
   created() {
     this.updateDarkMode();
   },
