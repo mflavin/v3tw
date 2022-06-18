@@ -1,14 +1,14 @@
 <template>
-  <div class="contents cursor-pointer" @click="toggleDarkMode()">
+  <div v-on="$attrs" class="flex cursor-pointer" @click="toggleDarkMode()">
     <div
       class="
-        hidden
         whitespace-nowrap
+        text-sm
+        font-semibold
         hover:text-indigo-500
         dark:text-white dark:hover:text-indigo-400
-        font-semibold
+        lg:hidden
         xl:block
-        text-sm
       "
     >
       Dark mode

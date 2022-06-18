@@ -1,5 +1,5 @@
 <template>
-  <div v-on="$attrs">
+  <div v-on="$attrs" class="sticky top-0 z-10">
     <nav
       class="
         sticky
@@ -33,7 +33,7 @@
     <!-- Overlay to allow for click away to close menu -->
     <div
       v-if="menu"
-      class="fixed top-0 left-0 z-[999] h-full w-full bg-slate-900 opacity-75"
+      class="fixed top-0 left-0 z-10 h-full w-full bg-slate-900 opacity-75"
       @click="menu = false"
     />
     <aside
@@ -53,7 +53,7 @@
         lg:block
       "
       :class="
-        menu ? 'z-[999] -mt-16 block bg-white dark:bg-slate-800' : 'hidden'
+        menu ? 'z-10 -mt-16 block bg-white dark:bg-slate-800' : 'hidden'
       "
     >
       <nav class="relative lg:text-sm lg:leading-6">

@@ -1,18 +1,15 @@
 <template>
   <div v-if="show" class="rounded-card toast-card">
-    <div
-      class="
-        -mt-2
-        h-0
-        w-full
-        text-right text-slate-500
-        hover:text-slate-900
-        dark:hover:text-slate-300
-      "
-    >
+    <div class="-mt-2 h-0 w-full text-right text-slate-500">
       <span
         @click="close()"
-        class="text-2xl font-medium cursor-pointer"
+        class="
+          cursor-pointer
+          text-2xl
+          font-medium
+          hover:text-slate-900
+          dark:hover:text-slate-300
+        "
         aria-hidden="true"
       >
         &times;

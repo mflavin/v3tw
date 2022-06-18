@@ -3,12 +3,11 @@
     v-on="$attrs"
     class="
       top-0
-      z-50
       block
       w-full
       border-b-[1px] border-slate-300
       dark:border-slate-700
-      lg:fixed
+      lg:fixed lg:z-10
     "
   >
     <!-- Desktop style for nav -->
@@ -59,19 +58,40 @@
             right-4
             z-50
             my-4
+            w-56
             list-none
             divide-y divide-slate-100
-            rounded
+            rounded-lg
             bg-white
+            px-2
+            pt-2
+            pb-6
             shadow
             dark:divide-gray-600 dark:bg-gray-700
           "
-          :class="menu ? 'block' : 'hidden'"
+          :class="menu ? '!block' : 'hidden'"
         >
-          <div class="py-3 px-4">
-            <span class="block text-sm text-gray-900 dark:text-white">
-              mflavin
-            </span>
+          <div class="py-3 px-5">
+            <div class="flex h-5 items-center justify-between">
+              <span class="block text-sm text-gray-900 dark:text-white">
+                mflavin
+              </span>
+              <div class="-mt-4 block text-right text-slate-500">
+                <span
+                  @click="toggleMenu()"
+                  class="
+                    cursor-pointer
+                    text-2xl
+                    font-medium
+                    hover:text-slate-900
+                    dark:hover:text-slate-300
+                  "
+                  aria-hidden="true"
+                >
+                  &times;
+                </span>
+              </div>
+            </div>
             <span
               class="
                 block
@@ -85,17 +105,17 @@
               mflavin@email.com
             </span>
           </div>
-          <ul class="py-1">
-            <NavLinks />
-            <li class="mx-0.5 flex items-center pr-3">
-              <DarkModeSwitch />
+          <ul>
+            <NavLinks class="ml-2 mt-2" />
+            <li class="mt-2 border-t border-slate-100 dark:border-gray-600">
+              <DarkModeSwitch class="ml-5 pt-3 pr-3" />
             </li>
           </ul>
         </div>
         <!-- Overlay to allow for click away to close menu -->
         <div
           v-if="menu"
-          class="fixed top-0 left-0 h-full w-full"
+          class="fixed top-0 left-0 h-full w-full z-10"
           @click="menu = false"
         ></div>
       </li>
