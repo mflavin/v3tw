@@ -37,7 +37,6 @@
           @click="toggleMenu"
           type="button"
           class="
-            peer
             m-2
             mr-8
             inline-flex
@@ -52,8 +51,7 @@
         </button>
         <div
           class="
-            peer
-            absolute
+            fixed
             top-8
             right-4
             z-50
@@ -63,15 +61,17 @@
             divide-y divide-slate-100
             rounded-lg
             bg-white
-            px-2
-            pt-2
-            pb-6
+            p-2
+            pb-4
             shadow
+            transition
+            duration-300
+            ease-in-out
             dark:divide-gray-600 dark:bg-gray-700
           "
-          :class="menu ? '!block' : 'hidden'"
+          :class="menu ? 'opacity-100 ' : 'opacity-0'"
         >
-          <div class="py-3 px-5">
+          <div class="py-2 px-5">
             <div class="flex h-5 items-center justify-between">
               <span class="block text-sm text-gray-900 dark:text-white">
                 mflavin
@@ -106,21 +106,21 @@
             </span>
           </div>
           <ul>
-            <NavLinks class="ml-2 mt-2" />
-            <li class="mt-2 border-t border-slate-100 dark:border-gray-600">
-              <DarkModeSwitch class="ml-5 pt-3 pr-3" />
+            <NavLinks class="py-2 px-5 text-sm" />
+            <li class="border-t border-slate-100 px-5 dark:border-gray-600">
+              <DarkModeSwitch class="pt-3" />
             </li>
           </ul>
         </div>
         <!-- Overlay to allow for click away to close menu -->
         <div
           v-if="menu"
-          class="fixed top-0 left-0 h-full w-full z-10"
+          class="fixed top-0 left-0 z-10 h-full w-full"
           @click="menu = false"
         ></div>
       </li>
       <!-- Hide nav links until small viewport -->
-      <NavLinks class="hidden lg:block" />
+      <NavLinks class="hidden px-3 py-1 text-sm lg:block" />
       <li class="mx-0.5 hidden items-center pr-3 lg:flex">
         <DarkModeSwitch />
       </li>

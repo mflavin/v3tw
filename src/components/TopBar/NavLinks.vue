@@ -3,16 +3,12 @@
     v-bind="$attrs"
     v-for="(nav, idx) in navItems"
     :key="`${nav.path}_${idx}`"
-    class="mx-0.5"
   >
     <RouterLink
       @click="$emit('route-clicked')"
       class="
         block
         whitespace-nowrap
-        px-3
-        py-1
-        text-sm
         font-semibold
         leading-6
         hover:text-indigo-500
