@@ -39,16 +39,13 @@
     @click="toggleMenu()"
   />
   <aside
-    v-if="menu"
     class="
       fixed
       inset-0
       top-[3.8125rem]
       left-[max(0px,calc(50%-45rem))]
-      right-auto
       z-[99]
       -mt-16
-      block
       w-sidebar
       -translate-x-full
       overflow-y-auto
@@ -63,11 +60,11 @@
       lg:z-10
       lg:mt-0
       lg:block
-      lg:translate-x-0
+      lg:-translate-x-0
       lg:bg-transparent
       lg:dark:bg-transparent
     "
-    :class="{ 'top-0 -translate-x-[0px]': show }"
+    :class="{ 'top-0 -translate-x-0': show }"
   >
     <nav class="relative lg:text-sm lg:leading-6">
       <ul>
