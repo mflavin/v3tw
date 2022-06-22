@@ -5,6 +5,8 @@
         sticky
         top-0
         z-10
+        flex
+        justify-between
         border-b-[1px] border-slate-300
         bg-slate-50
         dark:border-slate-700 dark:bg-slate-800
@@ -15,19 +17,30 @@
         @click="toggleMenu"
         type="button"
         class="
-          peer
-          my-2
-          mx-8
-          inline-flex
-          items-center
           rounded-lg
-          text-sm text-slate-500
+          py-2
+          px-8
+          text-slate-500
           hover:bg-slate-50
           dark:text-slate-300 dark:hover:bg-gray-700
         "
       >
-        <IconMenu />
-        <span class="ml-2">Menu</span>
+        <IconMenu class="absolute" />
+        <span class="ml-8">Menu</span>
+      </button>
+      <button
+        @click="scrollToTopOfPage"
+        type="button"
+        class="
+          rounded-lg
+          py-2
+          px-8
+          text-slate-500
+          hover:bg-slate-50
+          dark:text-slate-300 dark:hover:bg-gray-700
+        "
+      >
+        <span class="ml-2">Return To Top</span>
       </button>
     </nav>
   </div>
@@ -46,7 +59,7 @@
       left-[max(0px,calc(50%-45rem))]
       z-[99]
       -mt-16
-      w-sidebar
+      w-64
       -translate-x-full
       overflow-y-auto
       border-r-[1px] border-slate-300
@@ -63,6 +76,7 @@
       lg:-translate-x-0
       lg:bg-transparent
       lg:dark:bg-transparent
+      2xl:w-72
     "
     :class="{ 'top-0 -translate-x-0': show }"
   >
@@ -99,7 +113,11 @@
                   : 'text-slate-700 dark:text-slate-300'
               "
             >
-              <RouterLink @click="$emit('route-clicked')" :to="nav.path">
+              <RouterLink
+                class="transition-none"
+                @click="$emit('route-clicked')"
+                :to="nav.path"
+              >
                 {{ nav.name }}
               </RouterLink>
             </li>
@@ -128,11 +146,17 @@ export default {
       ],
     };
   },
+  computed: {
+    currentRoute() {},
+  },
   methods: {
     toggleMenu() {
       if (!this.menu) this.menu = !this.menu;
       else setTimeout(() => (this.menu = !this.menu), 300);
       setTimeout(() => (this.show = !this.show), 0);
+    },
+    scrollToTopOfPage() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
   },
 };

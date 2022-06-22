@@ -123,7 +123,7 @@
         ></div>
       </li>
       <!-- Hide nav links until small viewport -->
-      <NavLinks class="hidden px-3 py-1 text-sm lg:block" />
+      <NavLinks class="hidden py-1 text-sm lg:block" />
       <li class="mx-0.5 hidden items-center pr-3 lg:flex">
         <DarkModeSwitch />
       </li>

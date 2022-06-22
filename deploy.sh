@@ -1,4 +1,4 @@
-git push
+git push origin main
 npm run build
 npm run deploy
 echo 'done'
