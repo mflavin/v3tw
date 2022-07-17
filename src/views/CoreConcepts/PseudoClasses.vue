@@ -19,36 +19,17 @@
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state -->
     <a
       href="#"
-      class="
-        rounded-card
-        group
-        block
-        p-6
-        py-8
-        ring-1 ring-slate-900/5
-        hover:bg-sky-500 hover:ring-sky-500
-      "
+      class="rounded-card group block p-6 py-8 ring-1 ring-slate-900/5 hover:bg-sky-500 hover:ring-sky-500"
     >
       <div class="flex items-center space-x-3">
         <h3
-          class="
-            text-sm
-            font-semibold
-            text-slate-900
-            group-hover:text-white
-            dark:text-white
-          "
+          class="text-sm font-semibold text-slate-900 group-hover:text-white dark:text-white"
         >
           New project
         </h3>
       </div>
       <p
-        class="
-          mt-3
-          text-sm text-slate-500
-          group-hover:text-white
-          dark:text-slate-300
-        "
+        class="mt-3 text-sm text-slate-500 group-hover:text-white dark:text-slate-300"
       >
         Create a new project from a variety of starting templates.
       </p>
@@ -80,14 +61,7 @@
       />
     </label>
     <blockquote
-      class="
-        py-8
-        text-center text-2xl
-        font-semibold
-        italic
-        text-slate-900
-        dark:text-slate-300
-      "
+      class="py-8 text-center text-2xl font-semibold italic text-slate-900 dark:text-slate-300"
     >
       When you look
       <span class="relative">
@@ -113,22 +87,7 @@
         <span class="sr-only">Choose profile photo</span>
         <input
           type="file"
-          class="
-            block
-            w-full
-            text-sm text-slate-500
-            file:mr-4
-            file:rounded-full
-            file:border-0
-            file:bg-violet-50
-            file:py-2
-            file:px-4
-            file:text-sm
-            file:font-semibold
-            file:text-indigo-500
-            hover:file:bg-violet-100
-            dark:text-slate-300
-          "
+          class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-violet-50 file:py-2 file:px-4 file:text-sm file:font-semibold file:text-indigo-500 hover:file:bg-violet-100 dark:text-slate-300"
         />
       </label>
     </form>
@@ -136,17 +95,7 @@
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#list-markers -->
     <ul
       role="list"
-      class="
-        rounded-card
-        my-8
-        list-disc
-        space-y-3
-        py-5
-        pl-5
-        text-slate-500
-        marker:text-sky-400
-        dark:text-slate-300
-      "
+      class="rounded-card my-8 list-disc space-y-3 py-5 pl-5 text-slate-500 marker:text-sky-400 dark:text-slate-300"
     >
       <li class="ml-5">5 cups chopped Porcini mushrooms</li>
       <li class="ml-5">1/2 cup of olive oil</li>
@@ -155,27 +104,11 @@
 
     <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#list-markers -->
     <div
-      class="
-        rounded-card rounded-lg
-        bg-white
-        px-6
-        py-8
-        shadow-xl
-        ring-1 ring-slate-900/5
-        dark:bg-slate-900
-      "
+      class="rounded-card rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-900"
     >
       <div>
         <span
-          class="
-            inline-flex
-            items-center
-            justify-center
-            rounded-md
-            bg-indigo-500
-            p-2
-            shadow-lg
-          "
+          class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg"
         >
           <svg
             class="h-6 w-6 text-white"
@@ -190,14 +123,7 @@
         </span>
       </div>
       <h3
-        class="
-          mt-5
-          text-base
-          font-medium
-          tracking-tight
-          text-slate-900
-          dark:text-white
-        "
+        class="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white"
       >
         Writes Upside-Down
       </h3>
@@ -209,24 +135,11 @@
 
     <div class="rounded-card my-8">
       <details
-        class="
-          group
-          rounded-lg
-          p-6
-          open:bg-white open:shadow-lg open:ring-1 open:ring-black/5
-          dark:open:bg-slate-900 dark:open:ring-white/10
-        "
+        class="group rounded-lg p-6 open:bg-white open:shadow-lg open:ring-1 open:ring-black/5 dark:open:bg-slate-900 dark:open:ring-white/10"
         open
       >
         <summary
-          class="
-            select-none
-            text-sm
-            font-semibold
-            leading-6
-            text-slate-900
-            dark:text-white dark:group-open:text-white
-          "
+          class="select-none text-sm font-semibold leading-6 text-slate-900 dark:text-white dark:group-open:text-white"
         >
           Why do they call it Ovaltine?
         </summary>
@@ -241,6 +154,7 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
 import ToastBox from '@/components/ToastBox.vue';
 import TextBox from '@/components/TextBox.vue';
 
@@ -249,6 +163,17 @@ export default {
   components: {
     ToastBox,
     TextBox,
+  },
+  created() {
+    useHead({
+      title: 'Pseudo Page',
+      meta: [
+        {
+          name: 'description',
+          content: 'Tailwind css Pseudo Classes Guide',
+        },
+      ],
+    });
   },
 };
 </script>

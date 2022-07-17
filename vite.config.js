@@ -8,15 +8,7 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/v3tw/',
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, '404.html'),
-      },
-    },
-  },
+  base: '/',
   plugins: [
     vue(),
     // https://vite-plugin-pwa.netlify.app/guide/auto-update.html#setup
@@ -31,5 +23,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  ssr: {
+    // TODO: workaround until they support native ESM
+    noExternal: ['workbox-window'],
   },
 });

@@ -1,19 +1,24 @@
-import { createApp } from 'vue';
+import { ViteSSG } from 'vite-ssg';
 import { createPinia } from 'pinia';
-
 import App from '@/App.vue';
 import '@/index.css';
 import router from '@/router';
 
 // https://vite-plugin-pwa.netlify.app/guide/auto-update.html#runtime
-import { registerSW } from 'virtual:pwa-register';
-const updateSW = registerSW({
-  onOfflineReady() {},
-});
+// import { registerSW } from 'virtual:pwa-register';
+// const updateSW = registerSW({
+//   onOfflineReady() {},
+// });
 
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(router);
-
-app.mount('#app');
+// `export const createApp` is required instead of the original `createApp(App).mount('#app')`
+export const createApp = ViteSSG(
+  // the root component
+  App,
+  // vue-router options
+  { routes: router.routes },
+  // function to have custom setups
+  ({ app, router, routes, isClient, initialState }) => {
+    // install plugins etc.
+    app.use(createPinia());
+  },
+)

@@ -3,13 +3,7 @@
     <div class="rounded-card sm:flex">
       <div class="sm:shrink-0">
         <img
-          class="
-            h-48
-            w-full
-            rounded
-            object-fill
-            sm:h-full sm:w-48 sm:object-cover
-          "
+          class="h-48 w-full rounded object-fill sm:h-full sm:w-48 sm:object-cover"
           src="/img/art.png"
           alt="Logo"
         />
@@ -22,16 +16,7 @@
         </div>
         <a
           href="#"
-          class="
-            mt-1
-            block
-            text-lg
-            font-medium
-            leading-tight
-            text-black
-            hover:underline
-            dark:text-white
-          "
+          class="mt-1 block text-lg font-medium leading-tight text-black hover:underline dark:text-white"
         >
           Finding customers for your new business
         </a>
@@ -45,11 +30,23 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
 import { mapActions } from 'pinia';
 import { darkmode } from '@/stores/darkmode';
 
 export default {
   name: 'ResponsiveDesign',
+  created() {
+    useHead({
+      title: 'Responsive Design Page',
+      meta: [
+        {
+          name: 'description',
+          content: 'Tailwind css responsive design guide section',
+        },
+      ],
+    });
+  },
   methods: {
     ...mapActions(darkmode, ['toggleDarkMode']),
   },

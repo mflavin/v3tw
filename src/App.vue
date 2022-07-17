@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head';
 import { TopBar } from '@/components/TopBar';
 import SideBar from '@/components/SideBar.vue';
 
@@ -20,7 +21,17 @@ export default {
   created() {
     // Remove transition-none class here to avoid first page load not syncing with color changes
     // Also add delay for same reason
-    setTimeout(() => document.body.classList.remove('transition-none'), 150);
+    // setTimeout(() => document.body.classList.remove('transition-none'), 150);
+
+    useHead({
+      title: 'Website Title',
+      meta: [
+        {
+          name: 'description',
+          content: 'Website description',
+        },
+      ],
+    });
   },
 };
 </script>

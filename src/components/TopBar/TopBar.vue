@@ -1,28 +1,11 @@
 <template>
   <nav
     v-on="$attrs"
-    class="
-      top-0
-      block
-      w-full
-      border-b-[1px] border-slate-300
-      dark:border-slate-700
-      lg:fixed lg:z-10
-    "
+    class="top-0 block w-full border-b-[1px] border-slate-300 dark:border-slate-700 lg:fixed lg:z-10"
   >
     <!-- Desktop style for nav -->
     <ul
-      class="
-        mx-auto
-        flex
-        h-topbar
-        max-w-8xl
-        items-center
-        justify-between
-        space-x-8
-        bg-slate-50
-        dark:bg-slate-800
-      "
+      class="mx-auto flex h-topbar max-w-8xl items-center justify-between space-x-8 bg-slate-50 dark:bg-slate-800"
     >
       <li class="lg:w-full">
         <a href="/" class="transition duration-300 hover:opacity-75">
@@ -38,40 +21,13 @@
         <button
           @click="toggleMenu()"
           type="button"
-          class="
-            m-2
-            mr-8
-            inline-flex
-            items-center
-            rounded-lg
-            text-sm text-slate-500
-            hover:bg-slate-50
-            dark:text-slate-300 dark:hover:bg-gray-700
-          "
+          class="m-2 mr-8 inline-flex items-center rounded-lg text-sm text-slate-500 hover:bg-slate-50 dark:text-slate-300 dark:hover:bg-gray-700"
         >
           <IconSettings />
         </button>
         <div
           v-if="menu"
-          class="
-            fixed
-            top-8
-            right-4
-            z-50
-            my-4
-            w-56
-            list-none
-            divide-y divide-slate-100
-            rounded-lg
-            bg-white
-            p-2
-            pb-4
-            shadow
-            transition
-            duration-300
-            ease-in-out
-            dark:divide-gray-600 dark:bg-gray-700
-          "
+          class="fixed top-8 right-4 z-50 my-4 w-56 list-none divide-y divide-slate-100 rounded-lg bg-white p-2 pb-4 shadow transition duration-300 ease-in-out dark:divide-gray-600 dark:bg-gray-700"
           :class="show ? 'opacity-100' : 'opacity-0'"
         >
           <div class="py-2 px-5">
@@ -82,13 +38,7 @@
               <div class="-mt-4 block text-right text-slate-500">
                 <span
                   @click="toggleMenu()"
-                  class="
-                    cursor-pointer
-                    text-2xl
-                    font-medium
-                    hover:text-slate-900
-                    dark:hover:text-slate-300
-                  "
+                  class="cursor-pointer text-2xl font-medium hover:text-slate-900 dark:hover:text-slate-300"
                   aria-hidden="true"
                 >
                   &times;
@@ -96,14 +46,7 @@
               </div>
             </div>
             <span
-              class="
-                block
-                truncate
-                text-sm
-                font-medium
-                text-gray-500
-                dark:text-gray-400
-              "
+              class="block truncate text-sm font-medium text-gray-500 dark:text-gray-400"
             >
               mflavin@email.com
             </span>
@@ -111,7 +54,9 @@
           <ul>
             <NavLinks class="py-2 px-5 text-sm" />
             <li class="border-t border-slate-100 px-5 dark:border-gray-600">
-              <DarkModeSwitch class="pt-3" />
+              <client-only>
+                <DarkModeSwitch class="pt-3" />
+              </client-only>
             </li>
           </ul>
         </div>
@@ -125,7 +70,9 @@
       <!-- Hide nav links until small viewport -->
       <NavLinks class="hidden py-1 text-sm lg:block" />
       <li class="mx-0.5 hidden items-center pr-3 lg:flex">
-        <DarkModeSwitch />
+        <client-only>
+          <DarkModeSwitch />
+        </client-only>
       </li>
     </ul>
   </nav>

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite-ssg build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "pinia": "^2.0.14",
-    "vue": "^3.2.36",
-    "vue-router": "^4.0.15"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@pinia/testing": "^0.0.12",
@@ -22,6 +21,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/test-utils": "^2.0.0",
+    "@vueuse/head": "^0.7.6",
     "autoprefixer": "^10.4.7",
     "cypress": "^10.0.2",
     "eslint": "^8.5.0",
@@ -37,6 +37,8 @@
     "tailwindcss": "^3.1.2",
     "vite": "^2.9.9",
     "vite-plugin-pwa": "^0.12.0",
-    "vitest": "^0.13.0"
+    "vite-ssg": "^0.20.2",
+    "vitest": "^0.13.0",
+    "vue-router": "^4.1.2"
   }
 }
