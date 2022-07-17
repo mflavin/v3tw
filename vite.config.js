@@ -17,6 +17,30 @@ export default defineConfig({
       workbox: {
         cleanupOutdatedCaches: false,
       },
+      includeAssets: ['favicon.ico'],
+      manifest: {
+        name: 'Vite',
+        short_name: 'Vite',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/img/icons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/img/icons/android-chrome-384x384.png',
+            sizes: '384x384',
+            type: 'image/png',
+          },
+          {
+            src: '/img/icons/android-chrome-384x384.png',
+            sizes: '384x384',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
     }),
   ],
   resolve: {
