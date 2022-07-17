@@ -31,8 +31,6 @@
 
 <script>
 import { useHead } from '@vueuse/head';
-import { mapActions } from 'pinia';
-import { darkmode } from '@/stores/darkmode';
 
 export default {
   name: 'ResponsiveDesign',
@@ -46,9 +44,6 @@ export default {
         },
       ],
     });
-  },
-  methods: {
-    ...mapActions(darkmode, ['toggleDarkMode']),
   },
 };
 </script>
