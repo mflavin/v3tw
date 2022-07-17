@@ -54,9 +54,6 @@
           <ul>
             <NavLinks class="py-2 px-5 text-sm" />
             <li class="border-t border-slate-100 px-5 dark:border-gray-600">
-              <client-only>
-                <DarkModeSwitch class="pt-3" />
-              </client-only>
             </li>
           </ul>
         </div>
@@ -70,9 +67,6 @@
       <!-- Hide nav links until small viewport -->
       <NavLinks class="hidden py-1 text-sm lg:block" />
       <li class="mx-0.5 hidden items-center pr-3 lg:flex">
-        <client-only>
-          <DarkModeSwitch />
-        </client-only>
       </li>
     </ul>
   </nav>
@@ -80,14 +74,12 @@
 
 <script>
 import IconSettings from '@/components/icons/IconSettings.vue';
-import DarkModeSwitch from './DarkModeSwitch.vue';
 import NavLinks from './NavLinks.vue';
 
 export default {
   name: 'TopBar',
   components: {
     IconSettings,
-    DarkModeSwitch,
     NavLinks,
   },
   data() {
