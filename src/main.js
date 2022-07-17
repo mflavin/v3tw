@@ -1,5 +1,4 @@
 import { ViteSSG } from 'vite-ssg';
-import { createPinia } from 'pinia';
 import App from '@/App.vue';
 import '@/index.css';
 import router from '@/router';
@@ -19,6 +18,5 @@ export const createApp = ViteSSG(
   // function to have custom setups
   ({ app, router, routes, isClient, initialState }) => {
     // install plugins etc.
-    app.use(createPinia());
   },
 )
