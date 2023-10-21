@@ -5,7 +5,6 @@
     :key="`${nav.path}_${idx}`"
   >
     <RouterLink
-      @click="$emit('route-clicked')"
       class="
         block
         whitespace-nowrap

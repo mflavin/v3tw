@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { createTestingPinia } from '@pinia/testing';
 import { mount } from '@vue/test-utils';
-import { TopBar } from '../TopBar';
+import { TopBar } from '@/components/TopBar';
 
 describe('TopBar', () => {
   it('renders properly', () => {

@@ -115,7 +115,6 @@
             >
               <RouterLink
                 class="transition-none"
-                @click="$emit('route-clicked')"
                 :to="nav.path"
               >
                 {{ nav.name }}
